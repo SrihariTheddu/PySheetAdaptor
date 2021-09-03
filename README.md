@@ -26,7 +26,7 @@ Project structure:
           > SheetAdaptor.py
     > tests
       
-//
+
 ## PySheetAdaptor
 
  It authenticates the google user..
@@ -48,7 +48,9 @@ Project structure:
 
   It is the light weight django server runs on local machine.
  
-
+ 
+#### for more info read the documentation
+#### for architecture see the architecture.png
 
 
 
