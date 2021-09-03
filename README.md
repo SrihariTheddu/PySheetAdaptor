@@ -11,21 +11,43 @@ The main features of using this package is
 Project structure:
 
 
-    PySheetAdaptor.py
-    client
-      GoogleClient.py
-    WebApp
-      webapp.py
-    PySheetResourceManager
-      PySheetResourceManager.py
-      SystemAdmin.py
-    PySheetManager
-      PySheetManager.py
-      SheetAdaptor.py
+    > PySheetAdaptor.py
+    > client
+          > GoogleClient.py
+    > WebApp
+          > webapp.py
+    > PySheetResourceManager           
+          > PySheetResourceManager.py
+          > SystemAdmin.py
+          > utils.py
+          > Handlers.py
+    > PySheetManager
+          > PySheetManager.py
+          > SheetAdaptor.py
+    > tests
       
+//
+## PySheetAdaptor
 
+ It authenticates the google user..
+ This module interacts with the google spreadsheets
+ It retrieves and updates the data onto the server..
+ 
+ 
+## PySheetResourceManager
+  
+  It setups the copy of server data on the local machine and performs different operations on the sheet locally..
+  The changes made locally are recorded in the log files by using logging handlers..
+ 
+## PySheetManager
+  
+  It communicates with the local machine and setups the server copy on local machine'
+  If local environment doesnot exist it uses SheetAdaptor to directly communicate with the sheet...
+  
+## Webapp
 
-
+  It is the light weight django server runs on local machine.
+ 
 
 
 
