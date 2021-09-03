@@ -66,19 +66,7 @@ def row_level_change(method, *args, **kwargs) -> None:
                 self.messages[self.bp_cursor].append((message_id, message, schema_action, schema_reaction, schema_url))
                 return
             self.messages[self.bp_cursor].append((message_id, message, schema_action, schema_reaction, schema_url))
-            """
-            for index,loop_message in enumerate(self.messages[self.bp_cursor]):
-                
-                if loop_message[0][1:] == message_id[1:]:
-                    if (loop_message[0][0] == "D" and message_id[1] == "I") or (loop_message[0][0] == "I" and message_id[1] == "D"):
-                        del self.messages[self.bp_cursor][index]
-                elif loop_message[0] == message_id:
-                    if loop_message[1] == message:
-                        break
-                else:
-                    self.messages[self.bp_cursor].append((message_id, message, schema_action, schema_reaction, schema_url))
-                    break
-            """
+           
         return track_change
 
 
@@ -124,12 +112,7 @@ def table_level_change(method, *args, **kwargs):
                 if self.BOUNDED_ENVIRON:
                     if input("Please Verify once Again Rollback[Y/N]   ::   ").lower() == 'n':
                         return
-                # count = len(self.messages[self.bp_cursor])-1
-                # while count>0:
-                #     message = self.messages[self.bp_cursor][count]
-                #     message[3][0](**message[3][1])
-                #     self.report.debug("Restoring The Methods" + message[4])
-                #     count-=1
+     
                 for message in self.messages[self.bp_cursor]:
                     message[3][0](**message[3][1])
                     self.report.info("Restoring The Methods" +message[4])
