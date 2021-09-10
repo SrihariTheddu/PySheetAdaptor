@@ -19,6 +19,7 @@ Project structure:
        > UtilityDriver.py
        > WebAppDriver.py
    > tests
+       > __init__.py
    > __init__.py
    > PySheetAdaptor.py
       
@@ -30,17 +31,17 @@ Project structure:
  It retrieves and updates the data onto the server..
  
  
-## PySheetResourceManager
+## MainDriver
   
   It setups the copy of server data on the local machine and performs different operations on the sheet locally..
   The changes made locally are recorded in the log files by using logging handlers..
  
-## PySheetManager
+## PySheetDriver
   
   It communicates with the local machine and setups the server copy on local machine'
   If local environment doesnot exist it uses SheetAdaptor to directly communicate with the sheet...
   
-## Webapp
+## WebAppDriver
 
   It is the light weight django server runs on local machine.
  
