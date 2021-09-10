@@ -11,20 +11,16 @@ The main features of using this package is
 Project structure:
 
 
-    > PySheetAdaptor.py
-    > client
-          > GoogleClient.py
-    > WebApp
-          > webapp.py
-    > PySheetResourceManager           
-          > PySheetResourceManager.py
-          > SystemAdmin.py
-          > utils.py
-          > Handlers.py
-    > PySheetManager
-          > PySheetManager.py
-          > SheetAdaptor.py
-    > tests
+    > Drivers
+       > BackupDriver.py
+       > MainDriver.py
+       > PySheetDriver.py
+       > SystemAdminDriver.py
+       > UtilityDriver.py
+       > WebAppDriver.py
+   > tests
+   > __init__.py
+   > PySheetAdaptor.py
       
 
 ## PySheetAdaptor
